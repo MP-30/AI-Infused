@@ -4,14 +4,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-client = OpenAI(
-    api_key=os.getenv("GROQ_API_KEY"),
-    base_url="https://api.groq.com/openai/v1"
-)
+client = OpenAI()
 
 
 response = client.chat.completions.create(
-    model="openai/gpt-oss-120b",
+    model="gpt-4o-mini",
     messages=[
         {"role": "system", "content": "You are a funny travel guide."},
         {"role": "user", "content": "Suggest one thing to do in Bengaluru."}
