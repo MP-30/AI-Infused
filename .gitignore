@@ -4,3 +4,4 @@
 .venv
 /.idea
 .idea01_scraper/.gradio/
+*.gradio
